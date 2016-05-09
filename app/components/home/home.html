@@ -1,0 +1,27 @@
+
+<link rel="stylesheet" href="assets/css/home.css">
+<link rel="stylesheet" href="assets/css/home-overrides.css">
+
+<main id="cd-main-content" ng-class="{'move-out': $ctrl.visible }">
+	<section id="cd-intro">
+		<h1>Whua, Bra do you even lift?</h1>
+		<header class="cd-header">
+			<div id="cd-logo"><a href="#"><img src="assets/img/Gym-Buddies-logo-128.png" class="gym-buddies-logo" alt="Logo"></a></div>
+			<a class="cd-menu-trigger" ng-click="$ctrl.visible = !$ctrl.visible">Menu<span></span></a>
+		</header>
+		<div class="cd-blurred-bg"></div>
+	</section> <!-- cd-intro -->
+</main>
+
+<div class="cd-shadow-layer" ng-class="{'is-visible': $ctrl.visible }"></div>
+
+<nav id="main-nav" ng-class="{'is-visible': $ctrl.visible }">
+	<ul>
+		<li><a ui-sref="members"><span>Get Started</span></a></li>
+		<li><a><span>Get the Faqs</span></a></li>
+		<li><a><span>Get Awesome</span></a></li>
+		<li><a><span>Get Info</span></a></li>
+		<li><a href="https://github.com/jakeoverall/" target="_blank"><span>Get Connected</span></a></li>
+	</ul>
+	<a class="cd-close-menu" ng-click="$ctrl.visible = !$ctrl.visible">Close<span></span></a>
+</nav>
