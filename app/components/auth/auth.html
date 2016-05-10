@@ -8,7 +8,12 @@
 		<ul ng-class="{'is-visible': $ctrl.show}">
 			<li><a class="cd-signin" ng-click="$ctrl.activeView = 'login'" ng-if="!$ctrl.member.email">Sign in</a></li>
 			<li><a class="cd-signup" ng-click="$ctrl.activeView = 'register'" ng-if="!$ctrl.member.email">Register</a></li>
-			<li><a class="cd-signup" ng-click="$ctrl.logout" ng-if="$ctrl.member.email">Logout</a></li>
+			<li ng-if="$ctrl.member.email">
+				<h1 style="color: #fff;">
+					Hi, {{$ctrl.member.username.split(' ')[0]}}
+					<a class="cd-signup" ng-click="$ctrl.logout()" >Logout</a>
+				</h1>
+			</li>
 		</ul>
 	</nav>
 </header>
@@ -46,7 +51,7 @@
 			</form>
 
 			<p class="cd-form-bottom-message"><a ng-click="$ctrl.activeView = 'forgot'">Forgot your password?</a></p>
-			 <a ng-click="$ctrl.activeView = ''; $ctrl.show = false;" class="cd-close-form">Close</a> 
+			<a ng-click="$ctrl.activeView = ''; $ctrl.show = false;" class="cd-close-form">Close</a>
 		</div>
 		<!-- cd-login -->
 
@@ -80,7 +85,7 @@
 				</p>
 			</form>
 
-			 <a class="cd-close-form" ng-click="$ctrl.activeView = ''; $ctrl.show = false;">Close</a> 
+			<a class="cd-close-form" ng-click="$ctrl.activeView = ''; $ctrl.show = false;">Close</a>
 		</div>
 		<!-- cd-signup -->
 
@@ -102,7 +107,6 @@
 
 			<p class="cd-form-bottom-message"><a ng-click="$ctrl.activeView = 'login'">Back to sign in</a></p>
 		</div>
-		<!-- cd-reset-password -->
 		<a ng-click="$ctrl.activeView = ''" class="cd-close-form">Close</a>
 	</div>
 </div>
