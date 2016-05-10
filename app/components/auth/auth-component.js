@@ -6,9 +6,9 @@
 			controller: AuthController
 		})
 
-	function AuthController($scope) {
+	function AuthController($scope, FBREF) {
 		var ac = this;
-		var db = new Firebase('https://gym-buddies.firebaseio.com/');
+		var db = new Firebase(FBREF);
 
 		ac.$onInit = activate;
 
