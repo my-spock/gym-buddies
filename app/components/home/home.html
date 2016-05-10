@@ -17,11 +17,10 @@
 
 <nav id="main-nav" ng-class="{'is-visible': $ctrl.visible }">
 	<ul>
-		<li><a ui-sref="members"><span>Get Started</span></a></li>
-		<li><a><span>Get the Faqs</span></a></li>
-		<li><a><span>Get Awesome</span></a></li>
-		<li><a><span>Get Info</span></a></li>
-		<li><a href="https://github.com/jakeoverall/" target="_blank"><span>Get Connected</span></a></li>
+		<li><a ui-sref="auth.members"><span>Get Started</span></a></li>
+		<li><a ui-sref="auth.members"><span>Get Awesome</span></a></li>
+		<li><a ui-sref="auth.members"><span>Get Info</span></a></li>
+		<li><a ui-sref="auth.members"><span>Get Connected</span></a></li>
 	</ul>
 	<a class="cd-close-menu" ng-click="$ctrl.visible = !$ctrl.visible">Close<span></span></a>
 </nav>

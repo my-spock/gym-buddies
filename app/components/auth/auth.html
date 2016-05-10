@@ -6,13 +6,15 @@
 
 	<nav class="main-nav" ng-click="$ctrl.show = !$ctrl.show">
 		<ul ng-class="{'is-visible': $ctrl.show}">
+			<li><a class="cd-signup"><span>Get Awesome</span></a></li>
+			<li><a class="cd-signup"><span>Get Info</span></a></li>
 			<li><a class="cd-signin" ng-click="$ctrl.activeView = 'login'" ng-if="!$ctrl.member.email">Sign in</a></li>
 			<li><a class="cd-signup" ng-click="$ctrl.activeView = 'register'" ng-if="!$ctrl.member.email">Register</a></li>
 			<li ng-if="$ctrl.member.email">
-				<h1 style="color: #fff;">
-					Hi, {{$ctrl.member.username.split(' ')[0]}}
-					<a class="cd-signup" ng-click="$ctrl.logout()" >Logout</a>
-				</h1>
+				<a class="cd-signin" ng-click="$ctrl.logout()">Logout</a>
+			</li>
+			<li ng-if="$ctrl.member.email">
+				<h1 style="color: #fff;" class="">Hi, {{$ctrl.member.username.split(' ')[0]}}</h1>
 			</li>
 		</ul>
 	</nav>
