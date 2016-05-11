@@ -15,5 +15,13 @@
 					url: '/members',
 					template: '<members-component></members-component>'
 				})
+				.state('auth.chat', {
+					url: '/chat',
+					template: '<chat-component></chat-component>'
+				})
+				.state('auth.share', {
+					url: '/share',
+					template: '<share-component></share-component>'
+				})
 		})
 }())

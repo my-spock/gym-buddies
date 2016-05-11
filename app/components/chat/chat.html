@@ -1,0 +1,25 @@
+<div>
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <h1>Chat box</h1>
+        </div>
+        <div class="panel-body">
+            <div ng-repeat="post in $ctrl.chatList">
+                <!--<div class="row">
+                    <p><small>{{post.author}}, {{post.date}}</small></p>
+                </div>-->
+                <div class="row">
+                    <h4>{{post.body}}</h4>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    
+    <form class="form-inline" ng-submit="$ctrl.sendMessage($ctrl.message)">
+        <div class="form-group">
+            <input type="text" ng-model="$ctrl.message.body" placeholder="Type message here">
+        </div>
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
+</div>

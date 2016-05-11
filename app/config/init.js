@@ -1,4 +1,5 @@
 angular.module('gym-buddies', [
 	'ui.router',
-	'gym-buddies.auth'
+	'gym-buddies.auth',
+	'firebase'
 ])
